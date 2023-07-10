@@ -9,6 +9,7 @@ import MoviesPage from "./components/Movies.page";
 import RQMoviesPage from "./components/RQMovies.page";
 import HomePage from "./components/Home.page";
 import Layout from "./components/Layout";
+import { QueryClient, QueryClientProvider } from "react-query";
 
 const router = createBrowserRouter(
     createRoutesFromElements(
@@ -20,8 +21,14 @@ const router = createBrowserRouter(
     )
 );
 
+const queryClient = new QueryClient();
+
 function App() {
-    return <RouterProvider router={router} />;
+    return (
+        <QueryClientProvider client={queryClient}>
+            <RouterProvider router={router} />
+        </QueryClientProvider>
+    );
 }
 
 export default App;
