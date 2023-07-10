@@ -1,0 +1,19 @@
+{
+    "movies": [
+        {
+            "id": 1,
+            "director": "Quentin Tarantino",
+            "title": "Pulp Fiction"
+        },
+        {
+            "id": 2,
+            "director": "John McTiernan",
+            "title": "Predator"
+        },
+        {
+            "id": 3,
+            "director": "James Cameron",
+            "title": "Terminator"
+        }
+    ]
+}
