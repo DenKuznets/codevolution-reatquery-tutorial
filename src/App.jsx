@@ -13,7 +13,7 @@ import {
     QueryClient,
     QueryClientProvider,
 } from "@tanstack/react-query";
-// import { ReactQueryDevTools } from 'react-query/devtools';
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
 const router = createBrowserRouter(
     createRoutesFromElements(
