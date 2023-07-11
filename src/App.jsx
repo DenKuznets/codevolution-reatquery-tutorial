@@ -9,7 +9,11 @@ import MoviesPage from "./components/Movies.page";
 import RQMoviesPage from "./components/RQMovies.page";
 import HomePage from "./components/Home.page";
 import Layout from "./components/Layout";
-import { QueryClient, QueryClientProvider } from "react-query";
+import {
+    QueryClient,
+    QueryClientProvider,
+} from "@tanstack/react-query";
+// import { ReactQueryDevTools } from 'react-query/devtools';
 
 const router = createBrowserRouter(
     createRoutesFromElements(
@@ -27,6 +31,7 @@ function App() {
     return (
         <QueryClientProvider client={queryClient}>
             <RouterProvider router={router} />
+            {/* <ReactQueryDevTools initialIsOpen={false} /> */}
         </QueryClientProvider>
     );
 }

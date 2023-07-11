@@ -1,1 +1,1 @@
-npm run json-serve запускает api endpoint по адресу http://localhost:4000/movies
+npm run serve-json запускает api endpoint по адресу http://localhost:4000/movies
