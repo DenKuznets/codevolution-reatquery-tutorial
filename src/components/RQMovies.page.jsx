@@ -7,11 +7,16 @@ const fetchMovies = () => {
 
 const RQMoviesPage = () => {
     // useQuery первый аргрумент ключ, второй, колбэк функция для подтягивания данных с api, третий аргумент (опциональный) конфигурация времени кэша в мс (по умолчанию 5 минут)
-    const { isLoading, data, error, isError, isFetching } = useQuery(["movies"], fetchMovies, {
-        cacheTime: 5000,
-    });
+    const { isLoading, data, error, isError, isFetching } = useQuery(
+        ["movies"],
+        fetchMovies,
+        {
+            cacheTime: 60 * 1000 * 5,
+            staleTime: 60 * 1000 * 10,
+        }
+    );
 
-    console.log({isLoading, isFetching});
+    console.log({ isLoading, isFetching });
 
     if (isLoading) return <h2>Loading...</h2>;
 
