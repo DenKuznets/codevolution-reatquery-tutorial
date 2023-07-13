@@ -15,5 +15,34 @@
             "director": "James Cameron",
             "title": "Terminator"
         }
+    ],
+    "tvseries": [
+        {
+            "id": 1,
+            "title": "Rome",
+            "seasons": "2"
+        },
+        {
+            "id": 2,
+            "title": "Twin Peaks",
+            "seasons": "2"
+        },
+        {
+            "id": 3,
+            "title": "Vinyl",
+            "seasons": "1"
+        }
+    ],
+    "directors": [
+        {
+            "id": "vishwas@example.com",
+            "worksId": "tarantino"
+        }
+    ],
+    "works": [
+        {
+            "id": "tarantino",
+            "best": ["pulp fiction", "reservoir dogs", "hateful eight"]
+        }
     ]
 }
