@@ -5,7 +5,7 @@ const fetchDirector = (email) => {
     return axios.get(`http://localhost:4000/directors/${email}`);
 };
 const fetchWorks = ({ queryKey }) => {
-    console.log({ queryKey });
+    // console.log({ queryKey });
     return axios.get(`http://localhost:4000/works/${queryKey[1]}`);
 };
 
@@ -21,12 +21,12 @@ const DependentQueriesPage = ({ email }) => {
         enabled: !!worksId,
     });
 
-    console.log({works});
+    // console.log({works});`
 
     return (
         <>
             <div> DependentQueriesPage</div>
-            {works && works?.data.best}
+            {works?.data.best}
         </>
     );
 };

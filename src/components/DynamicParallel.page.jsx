@@ -6,7 +6,7 @@ const fetchMovie = (movieId) => {
 };
 
 const DynamicParallelPage = ({ movieIds }) => {
-    // console.log(movieIds);
+    // для выполнения неизвестного количества параллельных запросов используется useQueries
     const queryResults = useQueries({
         queries: movieIds.map((id) => {
             return {
@@ -15,8 +15,25 @@ const DynamicParallelPage = ({ movieIds }) => {
             };
         }),
     });
-    // console.log({ queryResults });
-    return <div>DynamicParallelPage</div>;
+
+    const listToShow = queryResults.map((item, index) => {
+        // console.log(item.data.data);
+
+        if(item.isLoading) return <div key={index}>Loading...</div>;
+
+        if (item.error) return <div key={index}>{item.error}</div>;
+
+        return (
+            <li key={index}>
+                <h1>{item.data.data.director}</h1>
+                <h2>{item.data.data.title}</h2>
+            </li>
+        );
+    });
+
+    // console.log(listToShow);
+
+    return <ul>{listToShow}</ul>;
 };
 
 export default DynamicParallelPage;

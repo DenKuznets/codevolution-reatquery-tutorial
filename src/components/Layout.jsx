@@ -14,6 +14,20 @@ const Layout = () => {
                     <li>
                         <Link to="/rq-movies">RQ Movies</Link>
                     </li>
+                    <li>
+                        <Link to="/rq-parallel">RQ parallel</Link>
+                    </li>
+                    <li>
+                        <Link to="/rq-dynamic-parallel">
+                            RQ dynamic-parallel
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/rq-dependent">RQ dependent</Link>
+                    </li>
+                    <li>
+                        <Link to="/rq-pagination">RQ pagination</Link>
+                    </li>
                 </ul>
             </nav>
             <Outlet />

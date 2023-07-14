@@ -9,9 +9,12 @@ const fetchTvseries = () => {
 };
 
 const ParallelQueriesPage = () => {
-    const { data: movies } = useQuery(["movies"], fetchMovies);
-    const { data: tvseries } = useQuery(["tvseries"], fetchTvseries);
+    const { isLoading: moviesLoading, error: moviesError, data: movies } = useQuery(["movies"], fetchMovies);
+    const { isLoading: tvseriesLoading, error: tvseriesError, data: tvseries } = useQuery(["tvseries"], fetchTvseries);
     console.log({ movies, tvseries });
+
+    // check for loading, errors and then show arrays in data.data , смотри в Movies.page.jsx
+
     return <div>ParallelQueriesPage</div>;
 };
 
