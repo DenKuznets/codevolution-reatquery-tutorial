@@ -20,6 +20,7 @@ import ParallelQueriesPage from "./components/ParallelQueries.page";
 import DynamicParallelPage from "./components/DynamicParallel.page";
 import DependentQueriesPage from "./components/DependentQueries.page";
 import PaginatedQueriesPage from "./components/PaginatedQueries.page";
+import InfiniteQueriesPage from "./components/InfiniteQueries.page";
 
 const router = createBrowserRouter(
     createRoutesFromElements(
@@ -37,6 +38,7 @@ const router = createBrowserRouter(
                 element={<DependentQueriesPage email="vishwas@example.com" />}
             />
             <Route path="rq-pagination" element={<PaginatedQueriesPage />} />
+            <Route path="rq-infinite" element={<InfiniteQueriesPage />} />
             <Route path="rq-movies/:movieId" element={<RQMoviePage />} />
         </Route>
     )

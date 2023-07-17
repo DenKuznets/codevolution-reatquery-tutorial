@@ -56,10 +56,10 @@ const PaginatedQueriesPage = () => {
                 {isFetching && "Loading"}
             </div>
             <div className="container__right">
-                В devtools на вкладке network выбери вместо "No Throttling" ->
-                "Slow 3g". При переключении страниц, внизу будет появляться
+                {`  В devtools на вкладке network выбери вместо No Throttling' ->
+                'Slow 3g'. При переключении страниц, внизу будет появляться
                 loading. Это загрузка следующей страницы с отображением
-                предыдущих данных благодаря опции keepPreviousData
+                предыдущих данных благодаря опции keepPreviousData`}
             </div>
         </Container>
     );

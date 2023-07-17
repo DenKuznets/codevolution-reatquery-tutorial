@@ -28,6 +28,9 @@ const Layout = () => {
                     <li>
                         <Link to="/rq-pagination">RQ pagination</Link>
                     </li>
+                    <li>
+                        <Link to="/rq-infinite">RQ infinite</Link>
+                    </li>
                 </ul>
             </nav>
             <Outlet />
