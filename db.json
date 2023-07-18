@@ -1,82 +1,96 @@
 {
-    "movies": [
-        {
-            "id": 1,
-            "director": "Quentin Tarantino",
-            "title": "Pulp Fiction"
-        },
-        {
-            "id": 2,
-            "director": "John McTiernan",
-            "title": "Predator"
-        },
-        {
-            "id": 3,
-            "director": "James Cameron",
-            "title": "Terminator"
-        }
-    ],
-    "tvseries": [
-        {
-            "id": 1,
-            "title": "Rome",
-            "seasons": "2"
-        },
-        {
-            "id": 2,
-            "title": "Twin Peaks",
-            "seasons": "2"
-        },
-        {
-            "id": 3,
-            "title": "Vinyl",
-            "seasons": "1"
-        }
-    ],
-    "directors": [
-        {
-            "id": "vishwas@example.com",
-            "worksId": "tarantino"
-        }
-    ],
-    "works": [
-        {
-            "id": "tarantino",
-            "best": ["pulp fiction", "reservoir dogs", "hateful eight"]
-        }
-    ],
-    "actors": [
-        {
-            "id": 1,
-            "name": "Keanu Reeves"
-        },
-        {
-            "id": 2,
-            "name": "John Turturo"
-        },
-        {
-            "id": 3,
-            "name": "Salma Hayek"
-        },
-        {
-            "id": 4,
-            "name": "John Travolta"
-        },
-        {
-            "id": 5,
-            "name": "Bruce Willis"
-        },
-        {
-            "id": 6,
-            "name": "Arnold Swarzenegger"
-        },
-        {
-            "id": 7,
-            "name": "Sigurney Weaver"
-        },
-        {
-            "id": 8,
-            "name": "Scarlett Johanssen"
-        }
-    ]
+  "movies": [
+    {
+      "id": 1,
+      "director": "Quentin Tarantino",
+      "title": "Pulp Fiction"
+    },
+    {
+      "id": 2,
+      "director": "John McTiernan",
+      "title": "Predator"
+    },
+    {
+      "id": 3,
+      "director": "James Cameron",
+      "title": "Terminator"
+    },
+    {
+      "director": "ABOBA",
+      "title": "DEN KUZ",
+      "id": 4
+    },
+    {
+      "director": "ABOBAasdas",
+      "title": "DEN KUZ1",
+      "id": 5
+    }
+  ],
+  "tvseries": [
+    {
+      "id": 1,
+      "title": "Rome",
+      "seasons": "2"
+    },
+    {
+      "id": 2,
+      "title": "Twin Peaks",
+      "seasons": "2"
+    },
+    {
+      "id": 3,
+      "title": "Vinyl",
+      "seasons": "1"
+    }
+  ],
+  "directors": [
+    {
+      "id": "vishwas@example.com",
+      "worksId": "tarantino"
+    }
+  ],
+  "works": [
+    {
+      "id": "tarantino",
+      "best": [
+        "pulp fiction",
+        "reservoir dogs",
+        "hateful eight"
+      ]
+    }
+  ],
+  "actors": [
+    {
+      "id": 1,
+      "name": "Keanu Reeves"
+    },
+    {
+      "id": 2,
+      "name": "John Turturo"
+    },
+    {
+      "id": 3,
+      "name": "Salma Hayek"
+    },
+    {
+      "id": 4,
+      "name": "John Travolta"
+    },
+    {
+      "id": 5,
+      "name": "Bruce Willis"
+    },
+    {
+      "id": 6,
+      "name": "Arnold Swarzenegger"
+    },
+    {
+      "id": 7,
+      "name": "Sigurney Weaver"
+    },
+    {
+      "id": 8,
+      "name": "Scarlett Johanssen"
+    }
+  ]
 }

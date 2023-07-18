@@ -1,11 +1,12 @@
 import { useParams } from "react-router-dom";
 import { useMovieData } from "../hooks/useMovieData";
 import { Card, CardContent, Typography } from "@mui/material";
+import { useState } from "react";
 
 const RQMoviePage = () => {
     const params = useParams();
     const { data, isLoading, isError, error } = useMovieData(params.movieId);
-    // console.log(data.data);
+
 
     if (isLoading) {
         return (

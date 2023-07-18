@@ -2,10 +2,14 @@ import { useInfiniteQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { Fragment } from "react";
 
+// число объектов которые мы хотим забирать с сервера за один раз
+const objPerPage = 2;
 const fetchActors = ({ pageParam = 1 }) => {
-    return axios.get(
-        `http://localhost:4000/actors?_limit=2&_page=${pageParam}`
+    const result = axios.get(
+        `http://localhost:4000/actors?_limit=${objPerPage}&_page=${pageParam}`
     );
+    // console.log(result);
+    return result;
 };
 
 const InfiniteQueriesPage = () => {
@@ -19,10 +23,12 @@ const InfiniteQueriesPage = () => {
         isFetching,
         isFetchingNextPage,
     } = useInfiniteQuery(["actors"], fetchActors, {
-        getNextPageParam: (_lastPage, pages) => {
-            if (pages.length < 4) {
+        getNextPageParam: (lastPage, pages) => {
+            // lastPage.headers["x-total-count"] - возвращает общее количество объектов. Делим на количество объектов на странице (_limit= в axios.get ссылке), получаем общее количество страниц.
+            if (pages.length < lastPage.headers["x-total-count"] / objPerPage) {
                 return pages.length + 1;
             } else {
+                // Когда мы возвращаем undefined , hasNextPage становится false.
                 return undefined;
             }
         },
