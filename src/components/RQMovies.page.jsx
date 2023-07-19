@@ -4,20 +4,22 @@ import { Button, ListItemButton, ListItemText } from "@mui/material";
 import { useState } from "react";
 
 const RQMoviesPage = () => {
-    const { isLoading, data, error, isError, isFetching, refetch } =
+    const { isLoading, data, error, isError,  refetch } =
         useMoviesData();
     const [director, setDirector] = useState("");
     const [title, setTitle] = useState("");
 
-    const { mutate: addMovie } = useAddMoviesData();
+    const mutationObj = useAddMoviesData();
+    // console.log(mutationObj);
+    const addMovie = mutationObj.mutate;
 
     const handleAddMovieClick = () => {
-        console.log({ director, title });
+        // console.log({ director, title });
         const movie = { director, title };
         addMovie(movie);
     };
 
-    if (isLoading || isFetching) return <h2>Loading...</h2>;
+    if (isLoading ) return <h2>Loading...</h2>;
 
     if (isError) return <h2>{error.message}</h2>;
 
@@ -48,7 +50,7 @@ const RQMoviesPage = () => {
             <Button variant="contained" onClick={refetch}>
                 Fetch movies
             </Button>
-            {data?.data.map((movie) => (
+            {data?.data?.map((movie) => (
                 <ListItemButton
                     to={`${movie.id}`}
                     underline="hover"
